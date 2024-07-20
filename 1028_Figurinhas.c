@@ -7,21 +7,20 @@ int main(){
 	scanf("%d", &casos);
 
 	for(int i = 0; i < casos; i++){
-		int pilha1, pilha2;
+		int pilha1, pilha2, maior, menor;
 		scanf("%d %d", &pilha1, &pilha2);
-		/*
-		for(int j = pilha1 > pilha2 ? pilha1 : pilha2; j > 0; j--){
-			if((pilha1%j == 0) && (pilha2%j == 0)){
-				printf("%d\n", j);
-				break;
-			}
-		}
-		*/
-		for(int j = 3; j < pilha1 > pilha2 ? pilha2: pilha1; j++){
-			if((pilha1%j == 0) && (pilha2%j == 0)){
-				printf("%d\n", j);
-				break;
-			}
+
+		maior = pilha1 > pilha2? pilha1 : pilha2;
+		menor = pilha1 < pilha2? pilha1 : pilha2;
+
+		while(maior > 0){
+				int temp = menor%maior;
+				menor = maior;
+				maior = temp;
+				if(menor%maior == 0){
+					printf("%d\n", maior);
+					break;
+				}
 		}
 	}
 	
