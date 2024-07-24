@@ -2,3 +2,4 @@ _*
 *.in
 ex_*
 *out
+.vscode
