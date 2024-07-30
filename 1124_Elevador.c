@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
 
 int main(){
+    double x1, y1, x2, y2;
+    int l, c, r1, r2, d1, d2;
 
-    int l, c, r1, r2;
     while(1){
         scanf("%d %d %d %d", &l, &c, &r1, &r2);
         if(l+c+r1+r2 == 0){ break; }
 
-        double diagonal = sqrtf((double)(l*l) + (double)(c*c));
-        int area_circulos = (3.14159 * (r1*r1)) + (3.14159 * (r2*r2));
+        char saida = 'N';
+        d1 = r1*2; d2 = r2*2;
+        int maior_d = d1 > d2 ? d1 : d2;
 
-        int r2_aux = r2;
-        r1 = r1*2; r2 = r2*2;
-        int maior = r1 > r2 ? r1 : r2;
+        x1 = r1; y1 = r1;
+        x2 = c - r2; y2 = l - r2;
 
-        if(((r1+r2 <= l && maior <= c) || (r1+r2 <= c && maior <= l)) || (diagonal > r1+r2 && (r1+r2_aux <= l || r1+r2_aux <= c))){
-            //printf("l = %d\nc = %d\nr1 = %d\nr2 = %d\nd = %lf\n", l, c, r1, r2, diagonal);
-            printf("S\n");
-        }else{
-            //printf("l = %d\nc = %d\nr1 = %d\nr2 = %d\nac = %lf\nlc = %d\n", l, c, r1, r2, area_circulos, l*c);
-            printf("N\n");
+        if(maior_d <= l && maior_d <= c){
+            if(sqrtf(pow(x1-x2, 2) + pow(y1-y2, 2)) >= r1+r2){
+                saida = 'S';
+            }
         }
+
+        printf("%c\n", saida);
 
     }
 
