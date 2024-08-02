@@ -19,7 +19,7 @@ int main(){
 
     //Calcular operação na matriz
     for(int i = 0; i < LIN; i++){
-        for(int j = 0; j < COL; j++){
+        for(int j = COL-i; j < COL; j++){
             if(i > (COL-1)-j){
                 resultado += matrix[i][j];
                 elements++;

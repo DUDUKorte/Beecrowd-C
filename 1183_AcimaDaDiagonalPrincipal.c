@@ -16,7 +16,7 @@ int main(){
 
     //Calcular operação na matriz
     for(int i = 0; i < 12; i++){
-        for(int j = 0; j < 12; j++){
+        for(int j = i+1; j < 12; j++){
             if(j > i){
                 resultado += matrix[i][j];
                 elements++;
