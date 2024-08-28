@@ -1,4 +1,8 @@
-//Feito - Problema 4
+/*
+    Cometa Halley - Problema 4
+    Eduardo Nogueira Korte
+*/
+
 #include <stdio.h>
 
 int main(){

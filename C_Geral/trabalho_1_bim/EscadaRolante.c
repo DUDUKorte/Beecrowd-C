@@ -1,4 +1,7 @@
-// Feito - Problewma 6
+/*
+    Escada Rolante - Problema 6
+    Eduardo Nogueira Korte
+*/
 
 #include <stdio.h>
 

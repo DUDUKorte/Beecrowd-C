@@ -1,4 +1,7 @@
-//Feito - Problema 2
+/*
+    Abastecimento - Problema 2
+    Eduardo Nogueira Korte
+*/
 
 #include <stdio.h>
 

@@ -1,4 +1,7 @@
-//Feito - Problema 5
+/*
+    Elevador - Problema 5
+    Eduardo Nogueira Korte
+*/
 
 #include <stdio.h>
 

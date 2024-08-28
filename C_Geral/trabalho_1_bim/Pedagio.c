@@ -1,4 +1,7 @@
-//Feito - Problema 3
+/*
+    Pedágio - Problema 3
+    Eduardo Nogueira Korte
+*/
 
 #include <stdio.h>
 
