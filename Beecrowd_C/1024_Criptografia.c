@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#define MAX_LEN 100
+#define MAX_LEN 1000000
 
 int main(void){
 
@@ -16,14 +16,13 @@ int main(void){
 		fgets(frase_entrada, sizeof(frase_entrada), stdin);
 
 		// Remover o caractere de nova linha se existir
-				frase_entrada[strcspn(frase_entrada, "\n")] = '\0';
+		frase_entrada[strcspn(frase_entrada, "\n")] = '\0';
 
-		for(int j = 0; j < strlen(frase_entrada)-1; j++){
+		for(int j = 0; j < strlen(frase_entrada); j++){
 			// Primeira Passada
 			if(isalpha(frase_entrada[j])){
 				frase_entrada[j] += 3;
 			}
-
 		}
 
 		//Inverte - Segunda Passada 
@@ -34,12 +33,8 @@ int main(void){
 		}
 
 		//Terceira Passada
-		for(int j = 0; j < strlen(frase_entrada); j++){
-			if(j < (strlen(frase_entrada)/2)){
-				continue;
-			}else{
-				frase_entrada[j] -= 1;
-			}
+		for(int j = strlen(frase_entrada)/2.0; j < strlen(frase_entrada); j++){
+			frase_entrada[j] -= 1;
 		}
 
 		printf("%s\n", frase_entrada);
