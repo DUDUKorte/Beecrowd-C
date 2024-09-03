@@ -4,15 +4,15 @@ Pronto
 */
 #include <stdio.h>
 
-float calcAreaTriangulo(h, b){
+float calcAreaTriangulo(float h, float b){
     return (b*h)/2.0;
 }
 
 int main(){
 
-    int h, b;
-    scanf("%d %d", &h, &b);
-    printf("%d", calcAreaTriangulo(h, b));
+    float h, b;
+    scanf("%f %f", &h, &b);
+    printf("%f", calcAreaTriangulo(h, b));
 
     return 0;
 }
