@@ -20,6 +20,16 @@ int main(){
     printf("Vector Inicial:\n");
     printVector(V1);
     printf("\n");
-    
+    printf("Valores do Vector? >> \n");
+    scanVector(&V1);
+    printf("Vector Pós-Scan:\n");
+    printVector(V1);
+    printf("\n");
+    printf("Limpando Vector...\n");
+    freeVector(&V1);
+    printf("Vector pós-free:\n");
+    printVector(V1);
+    printf("\n");
+
     return 0;
 }
